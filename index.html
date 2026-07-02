@@ -18,11 +18,8 @@
       --card-bg:    #122035;
       --border:     #1e3352;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--navy);
       color: var(--white);
@@ -30,8 +27,6 @@
       font-size: 16px;
       line-height: 1.6;
     }
-
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -45,31 +40,10 @@
       align-items: center;
       justify-content: space-between;
     }
-
-    .nav-logo {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--teal);
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--grey);
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-
+    .nav-logo { font-family: 'Space Mono', monospace; font-size: 0.85rem; color: var(--teal); letter-spacing: 0.05em; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--grey); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.05em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--teal-light); }
-
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -78,402 +52,70 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
     .hero-inner { width: 100%; }
-
-    .hero-eyebrow {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--teal);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-name {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .hero-name span {
-      display: block;
-      color: var(--teal-light);
-    }
-
-    .hero-tagline {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-      color: var(--grey);
-      max-width: 580px;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 3rem;
-    }
-
-    .tag {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--teal-dim);
-      border-radius: 2px;
-      color: var(--teal-light);
-      text-transform: uppercase;
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--teal);
-      color: var(--navy);
-      padding: 0.75rem 1.75rem;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .btn-primary:hover {
-      background: var(--teal-light);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--teal-dim);
-      color: var(--teal-light);
-      padding: 0.75rem 1.75rem;
-      border-radius: 3px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      transition: border-color 0.2s, color 0.2s, transform 0.15s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--teal-light);
-      color: var(--white);
-      transform: translateY(-1px);
-    }
-
-    /* ── SECTION SHARED ── */
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 6rem 2rem;
-    }
-
-    .section-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--teal);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .section-line {
-      width: 48px;
-      height: 2px;
-      background: var(--teal);
-      margin-bottom: 3rem;
-    }
-
-    /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    .about-text p {
-      color: var(--grey);
-      margin-bottom: 1rem;
-      line-height: 1.8;
-    }
-
-    .about-text p strong {
-      color: var(--white);
-    }
-
-    .about-stats {
-      display: grid;
-      gap: 1.25rem;
-    }
-
-    .stat-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--teal);
-      padding: 1.25rem 1.5rem;
-      border-radius: 3px;
-    }
-
-    .stat-value {
-      font-family: 'Space Mono', monospace;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--teal-light);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: var(--grey);
-      letter-spacing: 0.03em;
-    }
-
-    /* ── PROJECTS ── */
-    .projects-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.75rem 2rem;
-      transition: border-color 0.2s, transform 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--teal);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-
-    .project-card:hover {
-      border-color: var(--teal-dim);
-      transform: translateY(-2px);
-    }
-
+    .hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .hero-name { font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .hero-name span { display: block; color: var(--teal-light); }
+    .hero-tagline { font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--grey); max-width: 580px; margin-bottom: 2.5rem; line-height: 1.7; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem; }
+    .tag { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; padding: 0.35rem 0.85rem; border: 1px solid var(--teal-dim); border-radius: 2px; color: var(--teal-light); text-transform: uppercase; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--teal); color: var(--navy); padding: 0.75rem 1.75rem; border-radius: 3px; text-decoration: none; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.03em; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+    .btn-secondary { border: 1px solid var(--teal-dim); color: var(--teal-light); padding: 0.75rem 1.75rem; border-radius: 3px; text-decoration: none; font-weight: 500; font-size: 0.9rem; letter-spacing: 0.03em; transition: border-color 0.2s, color 0.2s, transform 0.15s; }
+    .btn-secondary:hover { border-color: var(--teal-light); color: var(--white); transform: translateY(-1px); }
+    section { max-width: 900px; margin: 0 auto; padding: 6rem 2rem; }
+    .section-label { font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--teal); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .section-line { width: 48px; height: 2px; background: var(--teal); margin-bottom: 3rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .about-text p { color: var(--grey); margin-bottom: 1rem; line-height: 1.8; }
+    .about-text p strong { color: var(--white); }
+    .about-stats { display: grid; gap: 1.25rem; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--teal); padding: 1.25rem 1.5rem; border-radius: 3px; }
+    .stat-value { font-family: 'Space Mono', monospace; font-size: 1.6rem; font-weight: 700; color: var(--teal-light); line-height: 1; margin-bottom: 0.25rem; }
+    .stat-label { font-size: 0.8rem; color: var(--grey); letter-spacing: 0.03em; }
+    .projects-grid { display: grid; gap: 1.5rem; }
+    .project-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; padding: 1.75rem 2rem; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--teal); opacity: 0; transition: opacity 0.2s; }
+    .project-card:hover { border-color: var(--teal-dim); transform: translateY(-2px); }
     .project-card:hover::before { opacity: 1; }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .project-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .project-date {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--teal);
-      white-space: nowrap;
-      padding-top: 0.2rem;
-    }
-
-    .project-desc {
-      color: var(--grey);
-      font-size: 0.9rem;
-      line-height: 1.7;
-      margin-bottom: 1.25rem;
-    }
-
-    .project-tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .tool-tag {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.06em;
-      padding: 0.25rem 0.6rem;
-      background: rgba(14, 158, 142, 0.1);
-      border: 1px solid rgba(14, 158, 142, 0.25);
-      border-radius: 2px;
-      color: var(--teal-light);
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.82rem;
-      color: var(--teal-light);
-      text-decoration: none;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-    }
-
+    .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.75rem; }
+    .project-title { font-size: 1.05rem; font-weight: 600; color: var(--white); line-height: 1.3; }
+    .project-date { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--teal); white-space: nowrap; padding-top: 0.2rem; }
+    .project-desc { color: var(--grey); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .project-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .tool-tag { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.06em; padding: 0.25rem 0.6rem; background: rgba(14, 158, 142, 0.1); border: 1px solid rgba(14, 158, 142, 0.25); border-radius: 2px; color: var(--teal-light); }
+    .project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--teal-light); text-decoration: none; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
     .project-link:hover { color: var(--white); }
-
-    .project-link svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    /* CAPSTONE special treatment */
-    .project-card.capstone {
-      border-color: var(--teal-dim);
-      background: linear-gradient(135deg, var(--card-bg) 0%, #0d2235 100%);
-    }
-
+    .project-link svg { width: 14px; height: 14px; }
+    .project-card.capstone { border-color: var(--teal-dim); background: linear-gradient(135deg, var(--card-bg) 0%, #0d2235 100%); }
     .project-card.capstone::before { opacity: 1; }
-
-    .capstone-badge {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--navy);
-      background: var(--teal);
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      margin-bottom: 0.75rem;
-      display: inline-block;
-    }
-
-    /* ── SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .skill-group {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.5rem;
-    }
-
-    .skill-group-title {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--teal);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .skill-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .skill-list li {
-      font-size: 0.85rem;
-      color: var(--grey);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .skill-list li::before {
-      content: '▸';
-      color: var(--teal);
-      font-size: 0.7rem;
-    }
-
-    /* ── CONTACT ── */
-    .contact-inner {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 3rem;
-      text-align: center;
-    }
-
-    .contact-inner p {
-      color: var(--grey);
-      max-width: 480px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem;
-      text-align: center;
-    }
-
-    footer p {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--grey);
-      letter-spacing: 0.05em;
-    }
-
+    .capstone-badge { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); background: var(--teal); padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.75rem; display: inline-block; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; }
+    .skill-group { background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; }
+    .skill-group-title { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+    .skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .skill-list li { font-size: 0.85rem; color: var(--grey); display: flex; align-items: center; gap: 0.5rem; }
+    .skill-list li::before { content: '▸'; color: var(--teal); font-size: 0.7rem; }
+    .contact-inner { background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px; padding: 3rem; text-align: center; }
+    .contact-inner p { color: var(--grey); max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+    .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    footer p { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--grey); letter-spacing: 0.05em; }
     footer span { color: var(--teal); }
-
-    /* ── RESPONSIVE ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     @media (max-width: 640px) {
       .about-grid { grid-template-columns: 1fr; }
       .project-header { flex-direction: column; gap: 0.4rem; }
       nav { padding: 0 1rem; }
       .nav-links { gap: 1rem; }
     }
-
-    /* ── SCROLL REVEAL ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <span class="nav-logo">MS // CYBERSECURITY</span>
     <ul class="nav-links">
@@ -484,17 +126,11 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
       <p class="hero-eyebrow">Cybersecurity Analytics &amp; AI/ML</p>
-      <h1 class="hero-name">
-        Melanie<br>
-        <span>Seguin</span>
-      </h1>
-      <p class="hero-tagline">
-        Cybersecurity professional with a sales leadership backbone. Turning data into decisions and teams into top performers. Bilingual EN/FR 🔥
-      </p>
+      <h1 class="hero-name">Melanie<br><span>Seguin</span></h1>
+      <p class="hero-tagline">Cybersecurity professional with a sales leadership backbone. Turning data into decisions and teams into top performers. Bilingual EN/FR 🔥</p>
       <div class="hero-tags">
         <span class="tag">SOC Analysis</span>
         <span class="tag">Penetration Testing</span>
@@ -507,66 +143,43 @@
       </div>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://www.linkedin.com/in/melanieseguin" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/melanie-seguin-a25a02413" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
       </div>
     </div>
   </div>
 
-  <!-- ABOUT -->
   <section id="about">
     <p class="section-label reveal">Background</p>
     <h2 class="section-title reveal">About Me</h2>
     <div class="section-line reveal"></div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>
-          I am a <strong>cybersecurity analyst and AI/ML professional</strong> completing a dual-track program at the University of North Florida through Fullstack Academy, graduating July 2026.
-        </p>
-        <p>
-          My background spans <strong>field sales leadership, business ownership, and technology</strong>, including holding the #1 national team ranking at AT&T and founding Novaforce Solutions LLC. I bring the same data-driven, results-focused mindset to cybersecurity that I applied in sales operations.
-        </p>
-        <p>
-          My lab work covers the full security spectrum: offensive operations with Kali Linux and Metasploit, defensive tooling with Snort IDS and honeypots, OSINT and reconnaissance, malware analysis, and GRC frameworks. I hold multiple <strong>Google Cloud AI certifications</strong> and am preparing for CompTIA Security+.
-        </p>
+        <p>I am a <strong>cybersecurity analyst and AI/ML professional</strong> completing a dual-track program at the University of North Florida through Fullstack Academy, graduating July 2026.</p>
+        <p>My background spans <strong>field sales leadership, business ownership, and technology</strong>, including holding the #1 national team ranking at AT&T and founding Novaforce Solutions LLC. I bring the same data-driven, results-focused mindset to cybersecurity that I applied in sales operations.</p>
+        <p>My lab work covers the full security spectrum: offensive operations with Kali Linux and Metasploit, defensive tooling with Snort IDS and honeypots, OSINT and reconnaissance, malware analysis, and GRC frameworks. I hold multiple <strong>Google Cloud AI certifications</strong> and am preparing for CompTIA Security+.</p>
       </div>
       <div class="about-stats reveal">
-        <div class="stat-card">
-          <div class="stat-value">9</div>
-          <div class="stat-label">Hands-on lab projects documented</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">Security+</div>
-          <div class="stat-label">CompTIA exam prep in progress</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">Dual-Track</div>
-          <div class="stat-label">Cybersecurity Analytics &amp; AI/ML — UNF / Fullstack Academy</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">EN/FR</div>
-          <div class="stat-label">Fully bilingual professional</div>
-        </div>
+        <div class="stat-card"><div class="stat-value">9</div><div class="stat-label">Hands-on lab projects documented</div></div>
+        <div class="stat-card"><div class="stat-value">Security+</div><div class="stat-label">CompTIA exam prep in progress</div></div>
+        <div class="stat-card"><div class="stat-value">Dual-Track</div><div class="stat-label">Cybersecurity Analytics &amp; AI/ML — UNF / Fullstack Academy</div></div>
+        <div class="stat-card"><div class="stat-value">EN/FR</div><div class="stat-label">Fully bilingual professional</div></div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <p class="section-label reveal">Lab Work</p>
     <h2 class="section-title reveal">Projects</h2>
     <div class="section-line reveal"></div>
     <div class="projects-grid">
 
-      <!-- CAPSTONE -->
       <div class="project-card capstone reveal">
         <span class="capstone-badge">Capstone Project</span>
         <div class="project-header">
           <div class="project-title">Operation Catch the Hacker — Red Team SSH Brute-Force Attack</div>
           <div class="project-date">June 2026</div>
         </div>
-        <p class="project-desc">
-          Served as Red Team Operator in a live attack simulation across two Kali Linux VMs in Parallels. Executed a complete offensive engagement: enumerated the target with Nmap service version scanning, then launched a credential brute-force attack against the SSH service using Hydra with a curated wordlist. Documented the full attack chain and delivered a polished PDF attack report with packet capture file to the Blue Team via Slack for analysis and remediation.
-        </p>
+        <p class="project-desc">Served as Red Team Operator in a live attack simulation across two Kali Linux VMs in Parallels. Executed a complete offensive engagement: enumerated the target with Nmap service version scanning, then launched a credential brute-force attack against the SSH service using Hydra with a curated wordlist. Documented the full attack chain and delivered a polished PDF attack report with packet capture file to the Blue Team via Slack for analysis and remediation.</p>
         <div class="project-tools">
           <span class="tool-tag">Nmap</span>
           <span class="tool-tag">Hydra</span>
@@ -575,17 +188,18 @@
           <span class="tool-tag">SSH Brute-Force</span>
           <span class="tool-tag">Packet Capture</span>
         </div>
+        <a href="Mel_RedTeam_Attack_Report%20.pdf" target="_blank" class="project-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Report
+        </a>
       </div>
 
-      <!-- LAB 1 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">Android Device Exploitation with Metasploit</div>
           <div class="project-date">June 2026</div>
         </div>
-        <p class="project-desc">
-          Simulated a full mobile attack lifecycle using Metasploit on Kali Linux ARM64. Generated a malicious Android APK using msfvenom with a reverse TCP Meterpreter payload, signed it with a self-generated keystore, hosted it via a Python HTTP server, and configured a multi/handler listener. Documented five Android security layers triggered during delivery — including Chrome warnings, unknown sources restriction, and Google Play Protect — and mapped attack techniques to MITRE ATT&CK. Used Android Studio AVD as the target due to Apple Silicon incompatibility with VirtualBox.
-        </p>
+        <p class="project-desc">Simulated a full mobile attack lifecycle using Metasploit on Kali Linux ARM64. Generated a malicious Android APK using msfvenom with a reverse TCP Meterpreter payload, signed it with a self-generated keystore, hosted it via a Python HTTP server, and configured a multi/handler listener. Documented five Android security layers triggered during delivery and mapped attack techniques to MITRE ATT&CK. Used Android Studio AVD as the target due to Apple Silicon incompatibility with VirtualBox.</p>
         <div class="project-tools">
           <span class="tool-tag">Metasploit 6.4.69</span>
           <span class="tool-tag">msfvenom</span>
@@ -595,21 +209,18 @@
           <span class="tool-tag">Python HTTP Server</span>
           <span class="tool-tag">MITRE ATT&amp;CK</span>
         </div>
-        <a href="pdfs/Android_Metasploit_Lab_Report.pdf" target="_blank" class="project-link">
+        <a href="Android_Metasploit_Lab_Report%20%281%29.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 2 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">Footprinting, Reconnaissance &amp; Active Network Scanning</div>
           <div class="project-date">June 2026</div>
         </div>
-        <p class="project-desc">
-          Conducted a two-part security analysis replicating real threat actor methodology. Part 1 used passive OSINT techniques — Whois, nslookup, Netcraft site reports, and Bing search operators — against fullstackacademy.com to build an intelligence profile including infrastructure mapping, email security posture (SPF/DMARC), technology stack disclosure, and subdomain enumeration. Part 2 performed active scanning against scanme.nmap.org using nmap -sV from Kali Linux, identifying outdated services (Apache 2.4.7, OpenSSH 6.6.1p1) and producing a full port/service/risk/defense analysis.
-        </p>
+        <p class="project-desc">Conducted a two-part security analysis replicating real threat actor methodology. Part 1 used passive OSINT techniques against fullstackacademy.com to build an intelligence profile including infrastructure mapping, email security posture (SPF/DMARC), technology stack disclosure, and subdomain enumeration. Part 2 performed active scanning against scanme.nmap.org using nmap -sV from Kali Linux, identifying outdated services and producing a full port/service/risk/defense analysis.</p>
         <div class="project-tools">
           <span class="tool-tag">Nmap -sV</span>
           <span class="tool-tag">Whois</span>
@@ -619,21 +230,18 @@
           <span class="tool-tag">Kali Linux ARM64</span>
           <span class="tool-tag">OSINT</span>
         </div>
-        <a href="pdfs/Revised_Recon_Lab_Report.pdf" target="_blank" class="project-link">
+        <a href="Revised_Recon_Lab_Report.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 3 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">Malware Analysis — Static &amp; Dynamic Examination of hello.exe</div>
           <div class="project-date">May 2026</div>
         </div>
-        <p class="project-desc">
-          Performed a two-phase malware analysis of hello.exe, an educational sample employing real-world evasion techniques. Static analysis with PEStudio revealed UPX packing (3 sections: UPX0/1/2), a minimal 6-function import table using LoadLibraryA and GetProcAddress for runtime API resolution, self-modifying code flags, and a 46/71 VirusTotal detection score. Dynamic analysis via VirusTotal sandbox confirmed the trojan.barys classification, mapped MITRE ATT&CK techniques (T1129, T1027, T1071), and identified C2 network activity. Documented real-world troubleshooting including Windows Defender evasion, Mac/Windows shared drive path conflicts, and accidental sample execution.
-        </p>
+        <p class="project-desc">Performed a two-phase malware analysis of hello.exe, an educational sample employing real-world evasion techniques. Static analysis with PEStudio revealed UPX packing, a minimal 6-function import table using LoadLibraryA and GetProcAddress for runtime API resolution, and self-modifying code flags. Dynamic analysis via VirusTotal sandbox confirmed trojan.barys classification (46/71 detection ratio), mapped MITRE ATT&CK techniques, and identified C2 network activity.</p>
         <div class="project-tools">
           <span class="tool-tag">PEStudio 9.61</span>
           <span class="tool-tag">VirusTotal</span>
@@ -642,21 +250,18 @@
           <span class="tool-tag">MITRE ATT&amp;CK</span>
           <span class="tool-tag">PowerShell</span>
         </div>
-        <a href="pdfs/Malware_Analysis_Lab_Report_v2.pdf" target="_blank" class="project-link">
+        <a href="Malware_Analysis_Lab_Report_v2.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 4 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">Snort IDS — Custom Intrusion Detection Rule Authoring</div>
           <div class="project-date">May 2026</div>
         </div>
-        <p class="project-desc">
-          Deployed Snort 2.9.20 on an Ubuntu 24.04 ARM64 VM and configured it to monitor a two-machine virtual network. Wrote two custom signature-based detection rules targeting ICMP traffic and SSH connection attempts, enabled promiscuous mode on the network interface, and generated live test traffic from a Kali Linux VM. Validated both rules fired correctly by analyzing the snort.alert.fast log, confirming timestamped alerts with source/destination IPs matching the expected attack pattern.
-        </p>
+        <p class="project-desc">Deployed Snort 2.9.20 on an Ubuntu 24.04 ARM64 VM and configured it to monitor a two-machine virtual network. Wrote two custom signature-based detection rules targeting ICMP traffic and SSH connection attempts, enabled promiscuous mode on the network interface, and generated live test traffic from a Kali Linux VM. Validated both rules fired correctly by analyzing the snort.alert.fast log.</p>
         <div class="project-tools">
           <span class="tool-tag">Snort 2.9.20</span>
           <span class="tool-tag">Ubuntu 24.04 ARM64</span>
@@ -665,21 +270,18 @@
           <span class="tool-tag">Custom IDS Rules</span>
           <span class="tool-tag">Log Analysis</span>
         </div>
-        <a href="pdfs/Snort_IDS_Lab_Report.pdf" target="_blank" class="project-link">
+        <a href="Snort_IDS_Lab_Report.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 5 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">SSH Honeypot — Intrusion Detection &amp; IP Blocking</div>
           <div class="project-date">April 2026</div>
         </div>
-        <p class="project-desc">
-          Built and operated a full detect-respond cycle using an OpenSSH honeypot on Windows 11 (Parallels VM). Installed and configured OpenSSH Server via PowerShell, verified Event Viewer logging, then simulated an SSH attack from macOS Terminal. Identified the attacker IP in the OpenSSH Operational log (Event ID 4), created a targeted Windows Firewall inbound block rule using New-NetFirewallRule, and validated the block with a timed-out connection attempt. Documented four real troubleshooting scenarios including NAT vs. bridged networking and Microsoft account SSH incompatibility.
-        </p>
+        <p class="project-desc">Built and operated a full detect-respond cycle using an OpenSSH honeypot on Windows 11. Installed and configured OpenSSH Server via PowerShell, verified Event Viewer logging, simulated an SSH attack from macOS Terminal, identified the attacker IP in the OpenSSH Operational log (Event ID 4), created a targeted Windows Firewall inbound block rule, and validated the block with a timed-out connection attempt.</p>
         <div class="project-tools">
           <span class="tool-tag">OpenSSH Server</span>
           <span class="tool-tag">Windows Defender Firewall</span>
@@ -688,21 +290,18 @@
           <span class="tool-tag">Windows 11 VM</span>
           <span class="tool-tag">macOS Terminal</span>
         </div>
-        <a href="pdfs/SSH_Honeypot_Report_v3.pdf" target="_blank" class="project-link">
+        <a href="SSH_Honeypot_Report_v3.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 6 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">Tor, Privoxy &amp; Windows Firewall — Anonymized Browsing Architecture</div>
           <div class="project-date">May 2026</div>
         </div>
-        <p class="project-desc">
-          Built a three-layer anonymized browsing architecture in a forensic lab scenario. Configured Tor Browser (v15.0.11) as the SOCKS5 exit proxy, Privoxy (v4.1.0) as the HTTP filtering layer forwarding to Tor on port 9150, and Firefox routed through Privoxy on port 8118. Created a Windows Defender Firewall outbound block rule preventing Firefox from bypassing the proxy chain. Verified the complete traffic chain using curl, the Tor Project check page, and TCPView real-time connection monitoring confirming exit node IP masking.
-        </p>
+        <p class="project-desc">Built a three-layer anonymized browsing architecture in a forensic lab scenario. Configured Tor Browser as the SOCKS5 exit proxy, Privoxy as the HTTP filtering layer, and Firefox routed through the proxy chain. Created a Windows Defender Firewall outbound block rule preventing Firefox from bypassing the proxy. Verified the complete traffic chain using curl, the Tor Project check page, and TCPView real-time connection monitoring.</p>
         <div class="project-tools">
           <span class="tool-tag">Tor Browser</span>
           <span class="tool-tag">Privoxy</span>
@@ -711,21 +310,18 @@
           <span class="tool-tag">Firefox</span>
           <span class="tool-tag">Windows 11 VM</span>
         </div>
-        <a href="pdfs/Tor_Privoxy_Firewall_Lab_Report.pdf" target="_blank" class="project-link">
+        <a href="Tor_Privoxy_Firewall_Lab_Report.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
       </div>
 
-      <!-- LAB 7 -->
       <div class="project-card reveal">
         <div class="project-header">
           <div class="project-title">TechSecure Ltd. — GRC Cybersecurity Foundations Assessment</div>
           <div class="project-date">March 2026</div>
         </div>
-        <p class="project-desc">
-          Produced a full GRC assessment for a fictitious mid-sized organization following a phishing intrusion. Classified 14 assets by sensitivity tier, mapped four threat actor categories to target assets and attack methods, and calculated a CVSS v3.1 score of 9.6 (Critical) for the phishing vulnerability. Performed quantitative risk analysis using SLE/ARO/ALE formulas (ALE: $200,000 for credential theft) and qualitative risk matrix scoring. Built a defense-in-depth control matrix aligned to NIST CSF five functions and CIS Critical Security Controls v8, with NIST SP 800-63B compliant password policy design for Windows Server 2022.
-        </p>
+        <p class="project-desc">Produced a full GRC assessment for a fictitious mid-sized organization following a phishing intrusion. Classified 14 assets by sensitivity tier, mapped four threat actor categories, and calculated a CVSS v3.1 score of 9.6 (Critical). Performed quantitative risk analysis using SLE/ARO/ALE formulas and built a defense-in-depth control matrix aligned to NIST CSF and CIS Critical Security Controls v8, with NIST SP 800-63B compliant password policy design.</p>
         <div class="project-tools">
           <span class="tool-tag">CVSS v3.1</span>
           <span class="tool-tag">NIST CSF</span>
@@ -734,7 +330,7 @@
           <span class="tool-tag">Risk Quantification</span>
           <span class="tool-tag">GRC</span>
         </div>
-        <a href="pdfs/TechSecure_Cybersecurity_Assessment.pdf" target="_blank" class="project-link">
+        <a href="TechSecure_Cybersecurity_Assessment.pdf" target="_blank" class="project-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           View Report
         </a>
@@ -743,7 +339,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <p class="section-label reveal">Technical Stack</p>
     <h2 class="section-title reveal">Skills</h2>
@@ -778,7 +373,7 @@
           <li>VirusTotal / Sandbox</li>
           <li>MITRE ATT&amp;CK Mapping</li>
           <li>Malware Behavior Analysis</li>
-          <li>Packet Capture / Wireshark</li>
+          <li>Packet Capture</li>
           <li>Log Forensics</li>
         </ul>
       </div>
@@ -818,39 +413,29 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <p class="section-label reveal">Get In Touch</p>
     <h2 class="section-title reveal">Contact</h2>
     <div class="section-line reveal"></div>
     <div class="contact-inner reveal">
-      <p>
-        Open to SOC analyst, cybersecurity, and technology roles. Let's connect and talk about how I can bring value to your team.
-      </p>
+      <p>Open to SOC analyst, cybersecurity, and technology roles. Let's connect and talk about how I can bring value to your team.</p>
       <div class="contact-links">
-        <a href="https://www.linkedin.com/in/melanieseguin" target="_blank" rel="noopener" class="btn-primary">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/melanie-seguin-a25a02413" target="_blank" rel="noopener" class="btn-primary">LinkedIn</a>
         <a href="https://github.com/MJSeguin-ops" target="_blank" rel="noopener" class="btn-secondary">GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>Built by <span>Melanie Seguin</span> &nbsp;|&nbsp; Fullstack Academy Cybersecurity Analytics &nbsp;|&nbsp; UNF 2026</p>
   </footer>
 
   <script>
-    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
